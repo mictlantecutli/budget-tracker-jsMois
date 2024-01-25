@@ -39,7 +39,7 @@ function addTransaction(source, amount){
 }
 form.addEventListener("submit", event =>{
   event.preventDefault();
-  addTransaction(form.source.value, form.amount.value);
+  addTransaction(form.source.value, Number(form.amount.value));
   //this reset method is when someone fill the form, and after the event it will be clear
   form.reset();
 });
@@ -56,3 +56,32 @@ function getTransaction(){
 };
 
 getTransaction();
+
+function deleteTransaction(id){
+  //console.log(id);
+  transactions = transactions.filter(transaction =>{
+    //console.log(transaction.id, id);
+    return transaction.id !== id;
+  });
+  console.log(transactions);
+  //we are overwriting into the same transaction array
+  localStorage.setItem("transactions", JSON.stringify(transactions));
+
+}
+
+incomeList.addEventListener("click", event =>{
+  if(event.target.classList.contains("delete")){
+    event.target.parentElement.remove();
+    deleteTransaction(Number(event.target.parentElement.dataset.id));
+    
+;  }
+});
+
+expenseList.addEventListener("click", event =>{
+  if(event.target.classList.contains("delete")){
+    //console.log(event.target);
+    event.target.parentElement.remove();
+    deleteTransaction(Number(event.target.parentElement.dataset.id));
+    
+  }
+});
