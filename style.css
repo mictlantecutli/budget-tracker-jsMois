@@ -92,11 +92,12 @@ contenido a la página. Mientras que solo HEIGHT la altura será fija y no puede
   margin: 10px;
 }*/
 
+/*
 .actions .add input {
   font-size: 18px;
   padding: 5px;
   margin: 10px;
-}
+}*/
 
 .actions .add input[type="submit"] {
   padding: 7px 15px;
