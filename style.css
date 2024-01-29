@@ -74,10 +74,10 @@ contenido a la página. Mientras que solo HEIGHT la altura será fija y no puede
 
   flex-grow: 1;
   background-color: #FFFFFF;
-  padding: 20px;
+  padding: 5px;
   box-shadow: var(--box-shadow);
   border-radius: 5px;
-  margin: 0px 10px;
+  margin: 0px 5px;
 }
 
 .actions .add {
