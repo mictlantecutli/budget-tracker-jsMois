@@ -80,6 +80,7 @@ contenido a la página. Mientras que solo HEIGHT la altura será fija y no puede
 }
 
 .actions .add {
+  max-width: 100vh;
   display: flex;
   flex-direction: column;
   margin: 10px;
