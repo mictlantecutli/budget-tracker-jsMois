@@ -81,9 +81,9 @@ contenido a la página. Mientras que solo HEIGHT la altura será fija y no puede
 }
 
 .actions .add {
-  min-width: 100px;
-  display: flex;
-  flex-direction: column;
+
+  display: grid;
+  grid-template-columns: 1;
   margin: 10px;
 }
 
